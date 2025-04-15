@@ -11,7 +11,8 @@
     "---------- Lint -------------------------------------------------------": "",
     "lint": "next lint",
     "---------- Helper -----------------------------------------------------": "",
-    "deps": "bunx taze --interactive --recursive --install --write",
+    "deps": "bunx taze --interactive --recursive --install --write --timediff false",
+    "deps:major": "bun run deps -- major",
     "-----------------------------------------------------------------------": ""
   },
   "dependencies": {
