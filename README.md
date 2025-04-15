@@ -38,3 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 # Interactive update packages with taze
 
 https://github.com/antfu-collective/taze
+
+# Lint & Format JavaScript with Biome
+
+https://www.youtube.com/watch?v=KvIMe69XO00
