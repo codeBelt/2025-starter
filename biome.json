@@ -65,7 +65,8 @@
         "noNamespace": "error",
         "noVar": "error",
         "useAsConstAssertion": "error",
-        "useFragmentSyntax": "error"
+        "useFragmentSyntax": "error",
+        "useNamingConvention": "error"
       },
       "suspicious": {
         "noClassAssign": "off",
