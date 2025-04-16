@@ -1,4 +1,6 @@
-export const getInitialColorScheme = () => {
+import type {ColorSchemeTheme} from '@/hooks/useColorScheme/useColorScheme.types';
+
+export const getInitialColorScheme = (): ColorSchemeTheme => {
   if (typeof window === 'undefined') return 'light';
 
   if (localStorage.theme === 'dark') return 'dark';

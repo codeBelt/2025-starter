@@ -1,4 +1,5 @@
 import {colorSchemeThemeId} from '@/hooks/useColorScheme/useColorScheme.constants';
+import type {ColorSchemeTheme} from '@/hooks/useColorScheme/useColorScheme.types';
 import {getInitialColorScheme} from '@/hooks/useColorScheme/useColorScheme.utils';
 import {useCallback, useEffect, useState} from 'react';
 
@@ -21,7 +22,7 @@ import {useCallback, useEffect, useState} from 'react';
  * - `respectSystem` (function): Function to reset the theme to respect the system's preference.
  */
 export const useColorScheme = () => {
-  const [scheme, setScheme] = useState(getInitialColorScheme);
+  const [scheme, setScheme] = useState<ColorSchemeTheme>(getInitialColorScheme);
 
   useEffect(() => {
     const root = document.documentElement;
