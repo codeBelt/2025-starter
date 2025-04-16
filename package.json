@@ -15,7 +15,7 @@
     "ts:watch": "npm run ts -- --watch",
     "---------- Test --------------------------------------------------------": "",
     "test": "bun test",
-    "test:watch": "vitest",
+    "test:watch": "bun test --watch",
     "---------- Helper -----------------------------------------------------": "",
     "deps": "bunx taze --interactive --recursive --install --write --timediff false",
     "deps:major": "bun run deps -- major",
