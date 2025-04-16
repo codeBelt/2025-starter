@@ -11,12 +11,18 @@
     "---------- Lint -------------------------------------------------------": "",
     "lint": "biome check",
     "lint:fix": "biome check --write",
+    "ts": "tsc --noEmit",
+    "ts:watch": "npm run ts -- --watch",
+    "---------- Test --------------------------------------------------------": "",
+    "test": "bun test",
+    "test:watch": "vitest",
     "---------- Helper -----------------------------------------------------": "",
     "deps": "bunx taze --interactive --recursive --install --write --timediff false",
     "deps:major": "bun run deps -- major",
     "-----------------------------------------------------------------------": ""
   },
   "dependencies": {
+    "http-status-codes": "2.3.0",
     "next": "15.3.0",
     "react": "19.1.0",
     "react-dom": "19.1.0"
@@ -28,6 +34,7 @@
     "@types/react": "19.1.2",
     "@types/react-dom": "19.1.2",
     "tailwindcss": "4.1.4",
-    "typescript": "5.8.3"
+    "typescript": "5.8.3",
+    "@types/bun": "latest"
   }
 }
