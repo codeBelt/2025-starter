@@ -49,6 +49,7 @@ describe('isDateObject', () => {
 
 describe('isRegex', () => {
   test('should return true for RegExp objects', () => {
+    // biome-ignore lint/performance/useTopLevelRegex: Don't need to do for tests
     expect(isRegex(/^fo(ba)?$/i)).toBe(true);
   });
 

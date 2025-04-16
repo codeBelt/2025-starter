@@ -24,4 +24,3 @@ export type ServiceResponseType<T, E = SerializableErrorType> =
 export type SerializableErrorType = {
   message: string;
 };
-

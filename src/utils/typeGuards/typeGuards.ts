@@ -1,4 +1,3 @@
-
 /**
  * Type Guard for checking defined values.
  *
@@ -26,7 +25,7 @@ export const isString = (value: unknown): value is string => {
  * Type Guard for checking if a value is a number.
  */
 export const isNumber = (value: unknown): value is number => {
-  return typeof value === 'number' && !isNaN(value);
+  return typeof value === 'number' && !Number.isNaN(value);
 };
 
 /**
@@ -48,11 +47,6 @@ export const isDateObject = (value: unknown): value is Date => {
  */
 export const isObject = (value: unknown): value is Record<string, unknown> => {
   return (
-    Boolean(value) &&
-    !Array.isArray(value) &&
-    typeof value === 'object' &&
-    !isRegex(value) &&
-    !isDateObject(value)
+    Boolean(value) && !Array.isArray(value) && typeof value === 'object' && !isRegex(value) && !isDateObject(value)
   );
 };
-
