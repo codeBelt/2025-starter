@@ -11,6 +11,8 @@
     "---------- Lint -------------------------------------------------------": "",
     "lint": "biome check",
     "lint:fix": "biome check --write",
+    "ts": "tsc --noEmit",
+    "ts:watch": "npm run ts -- --watch",
     "---------- Helper -----------------------------------------------------": "",
     "deps": "bunx taze --interactive --recursive --install --write --timediff false",
     "deps:major": "bun run deps -- major",
