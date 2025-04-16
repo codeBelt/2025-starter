@@ -28,6 +28,13 @@
           }
         }
       },
+      "performance": {
+        "noAccumulatingSpread": "error",
+        "noBarrelFile": "error",
+        "noDelete": "error",
+        "noReExportAll": "error",
+        "useTopLevelRegex": "error"
+      },
       "a11y": {
         "noAriaUnsupportedElements": "warn",
         "noBlankTarget": "error",
