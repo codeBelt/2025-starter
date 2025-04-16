@@ -2,39 +2,22 @@
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
   "files": { "ignoreUnknown": false, "ignore": [".next"] },
-  "organizeImports": { "enabled": true },
   "formatter": {
-    "attributePosition": "auto",
-    "bracketSpacing": true,
     "enabled": true,
+    "useEditorconfig": true,
     "formatWithErrors": false,
     "indentStyle": "space",
     "indentWidth": 2,
     "lineEnding": "lf",
     "lineWidth": 120,
-    "useEditorconfig": true
+    "attributePosition": "auto",
+    "bracketSpacing": true
   },
+  "organizeImports": { "enabled": true },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
-      "nursery": {
-        "useSortedClasses": {
-          "level": "error",
-          "fix": "safe",
-          "options": {
-            "attributes": ["classList"],
-            "functions": ["clsx", "cva", "tw"]
-          }
-        }
-      },
-      "performance": {
-        "noAccumulatingSpread": "error",
-        "noBarrelFile": "error",
-        "noDelete": "error",
-        "noReExportAll": "error",
-        "useTopLevelRegex": "error"
-      },
       "a11y": {
         "noAriaUnsupportedElements": "warn",
         "noBlankTarget": "error",
@@ -58,9 +41,23 @@
         "noUnusedImports": "error",
         "noUnusedVariables": "error",
         "useArrayLiterals": "off",
-        "useExhaustiveDependencies": "warn",
+        "useExhaustiveDependencies": "error",
         "useHookAtTopLevel": "error",
         "useJsxKeyInIterable": "error"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "error",
+          "fix": "safe",
+          "options": { "attributes": ["classList"], "functions": ["clsx", "cva", "tw"] }
+        }
+      },
+      "performance": {
+        "noAccumulatingSpread": "error",
+        "noBarrelFile": "error",
+        "noDelete": "error",
+        "noReExportAll": "error",
+        "useTopLevelRegex": "error"
       },
       "security": { "noDangerouslySetInnerHtmlWithChildren": "error" },
       "style": {
@@ -68,7 +65,7 @@
         "noNamespace": "error",
         "noVar": "error",
         "useAsConstAssertion": "error",
-        "useConst": "error"
+        "useFragmentSyntax": "error"
       },
       "suspicious": {
         "noClassAssign": "off",
@@ -93,15 +90,15 @@
   },
   "javascript": {
     "formatter": {
-      "arrowParentheses": "always",
-      "attributePosition": "auto",
-      "bracketSameLine": false,
-      "bracketSpacing": false,
       "jsxQuoteStyle": "double",
       "quoteProperties": "asNeeded",
-      "quoteStyle": "single",
+      "trailingCommas": "es5",
       "semicolons": "always",
-      "trailingCommas": "es5"
+      "arrowParentheses": "always",
+      "bracketSameLine": false,
+      "quoteStyle": "single",
+      "attributePosition": "auto",
+      "bracketSpacing": false
     }
   }
 }
