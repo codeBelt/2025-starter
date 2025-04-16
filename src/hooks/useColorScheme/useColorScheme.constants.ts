@@ -1,0 +1,1 @@
+export const colorSchemeThemeId = 'colorSchemeTheme';
