@@ -4,20 +4,37 @@
   "files": { "ignoreUnknown": false, "ignore": [".next"] },
   "organizeImports": { "enabled": true },
   "formatter": {
+    "attributePosition": "auto",
+    "bracketSpacing": true,
     "enabled": true,
-    "useEditorconfig": true,
     "formatWithErrors": false,
     "indentStyle": "space",
     "indentWidth": 2,
     "lineEnding": "lf",
     "lineWidth": 120,
-    "attributePosition": "auto",
-    "bracketSpacing": true
+    "useEditorconfig": true
   },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
+      "nursery": {
+        "useSortedClasses": {
+          "level": "error",
+          "fix": "safe",
+          "options": {
+            "attributes": ["classList"],
+            "functions": ["clsx", "cva", "tw"]
+          }
+        }
+      },
+      "performance": {
+        "noAccumulatingSpread": "error",
+        "noBarrelFile": "error",
+        "noDelete": "error",
+        "noReExportAll": "error",
+        "useTopLevelRegex": "error"
+      },
       "a11y": {
         "noAriaUnsupportedElements": "warn",
         "noBlankTarget": "error",
@@ -38,6 +55,7 @@
         "noUndeclaredVariables": "off",
         "noUnreachable": "off",
         "noUnreachableSuper": "off",
+        "noUnusedImports": "error",
         "noUnusedVariables": "error",
         "useArrayLiterals": "off",
         "useExhaustiveDependencies": "warn",
@@ -55,6 +73,7 @@
       "suspicious": {
         "noClassAssign": "off",
         "noCommentText": "error",
+        "noConsoleLog": "error",
         "noDuplicateClassMembers": "off",
         "noDuplicateJsxProps": "error",
         "noDuplicateObjectKeys": "off",
@@ -74,15 +93,15 @@
   },
   "javascript": {
     "formatter": {
+      "arrowParentheses": "always",
+      "attributePosition": "auto",
+      "bracketSameLine": false,
+      "bracketSpacing": false,
       "jsxQuoteStyle": "double",
       "quoteProperties": "asNeeded",
-      "trailingCommas": "es5",
-      "semicolons": "asNeeded",
-      "arrowParentheses": "always",
-      "bracketSameLine": false,
       "quoteStyle": "single",
-      "attributePosition": "auto",
-      "bracketSpacing": false
+      "semicolons": "always",
+      "trailingCommas": "es5"
     }
   }
 }
