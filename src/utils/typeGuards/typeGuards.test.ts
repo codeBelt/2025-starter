@@ -4,19 +4,15 @@ import {isDateObject, isDefined, isNumber, isObject, isRegex, isString} from './
 const commonObjects = [{}, {prop: 'data'}, undefined, null, true, false, 0, 1, 'str', [], new Date(), /^fo(ba)?$/i];
 
 describe('isDefined', () => {
-  const cases = [
+  test.each([
     {input: undefined, expected: false},
     {input: null, expected: false},
     {input: Number.NaN, expected: true},
     {input: 0, expected: true},
     {input: false, expected: true},
-  ];
-
-  for (const {input, expected} of cases) {
-    test(`should return ${expected} for input ${String(input)}`, () => {
-      expect(isDefined(input)).toBe(expected);
-    });
-  }
+  ])('should return $expected for input $input', ({input, expected}) => {
+    expect(isDefined(input)).toBe(expected);
+  });
 });
 
 describe('isString', () => {
@@ -86,7 +82,7 @@ describe('isObject', () => {
 });
 
 describe('isNumber', () => {
-  const cases = [
+  test.each([
     {input: -1, expected: true},
     {input: 0, expected: true},
     {input: 1, expected: true},
@@ -96,11 +92,7 @@ describe('isNumber', () => {
     {input: null, expected: false},
     {input: undefined, expected: false},
     {input: true, expected: false},
-  ];
-
-  for (const {input, expected} of cases) {
-    test(`should return ${expected} for input ${String(input)}`, () => {
-      expect(isNumber(input)).toBe(expected);
-    });
-  }
+  ])('should return $expected for input $input', ({input, expected}) => {
+    expect(isNumber(input)).toBe(expected);
+  });
 });
