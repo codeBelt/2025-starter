@@ -1,7 +1,7 @@
-import {useCallback, useEffect, useState} from 'react';
 import {colorSchemeThemeId} from '@/hooks/useColorScheme/useColorScheme.constants';
 import type {ColorSchemeTheme} from '@/hooks/useColorScheme/useColorScheme.types';
 import {getInitialColorScheme} from '@/hooks/useColorScheme/useColorScheme.utils';
+import {useCallback, useEffect, useState} from 'react';
 
 /**
  * Custom hook that manages the color scheme (light/dark) based on the user's preferences

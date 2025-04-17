@@ -1,6 +1,6 @@
 'use client';
-import {useIsClient} from '@uidotdev/usehooks';
 import {useColorScheme} from '@/hooks/useColorScheme/useColorScheme';
+import {useIsClient} from '@uidotdev/usehooks';
 
 export const ColorSchemeToggle = () => {
   const isClient = useIsClient();

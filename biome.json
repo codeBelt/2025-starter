@@ -1,20 +1,19 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.0.0-beta.1/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
-  "files": { "ignoreUnknown": false, "includes": ["**", "!.next"] },
+  "files": { "ignoreUnknown": false, "ignore": [".next"] },
   "formatter": {
     "enabled": true,
+    "useEditorconfig": true,
     "formatWithErrors": false,
     "indentStyle": "space",
     "indentWidth": 2,
     "lineEnding": "lf",
     "lineWidth": 120,
     "attributePosition": "auto",
-    "bracketSameLine": false,
-    "bracketSpacing": true,
-    "expand": "auto",
-    "useEditorconfig": false
+    "bracketSpacing": true
   },
+  "organizeImports": { "enabled": true },
   "linter": {
     "enabled": true,
     "rules": {
@@ -41,7 +40,7 @@
         "noUnreachableSuper": "off",
         "noUnusedImports": "error",
         "noUnusedVariables": "error",
-        "useArrayLiterals": "error",
+        "useArrayLiterals": "off",
         "useExhaustiveDependencies": "error",
         "useHookAtTopLevel": "error",
         "useJsxKeyInIterable": "error"
@@ -64,6 +63,7 @@
       "style": {
         "noArguments": "error",
         "noNamespace": "error",
+        "noVar": "error",
         "useAsConstAssertion": "error",
         "useFragmentSyntax": "error",
         "useNamingConvention": "error"
@@ -71,6 +71,7 @@
       "suspicious": {
         "noClassAssign": "off",
         "noCommentText": "error",
+        "noConsoleLog": "error",
         "noDuplicateClassMembers": "off",
         "noDuplicateJsxProps": "error",
         "noDuplicateObjectKeys": "off",
@@ -83,12 +84,10 @@
         "noRedeclare": "off",
         "noUnsafeDeclarationMerging": "error",
         "noUnsafeNegation": "off",
-        "noVar": "error",
         "useGetterReturn": "off",
         "useNamespaceKeyword": "error"
       }
-    },
-    "includes": ["**"]
+    }
   },
   "javascript": {
     "formatter": {
@@ -101,19 +100,6 @@
       "quoteStyle": "single",
       "attributePosition": "auto",
       "bracketSpacing": false
-    }
-  },
-  "assist": {
-    "enabled": true,
-    "actions": {
-      "source": {
-        "organizeImports": {
-          "level": "on",
-          "options": {
-            "groups": [":URL:", ":NODE:"]
-          }
-        }
-      }
     }
   }
 }
