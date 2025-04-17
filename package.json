@@ -18,8 +18,7 @@
     "test:watch": "bun test --watch",
     "test:coverage": "bun test --coverage",
     "---------- Helper -----------------------------------------------------": "",
-    "deps": "bunx taze --interactive --recursive --install --write --timediff false",
-    "deps:major": "bun run deps -- major",
+    "deps": "bunx npm-check-updates -ui",
     "deps:outdated": "bun outdated",
     "checkall": "bun run lint:fix && bun run ts && bun run test",
     "-----------------------------------------------------------------------": ""
@@ -27,18 +26,18 @@
   "dependencies": {
     "@uidotdev/usehooks": "2.4.1",
     "http-status-codes": "2.3.0",
-    "next": "15.3.0",
+    "next": "15.3.1",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@tailwindcss/postcss": "4.1.4",
-    "@types/node": "20.17.30",
+    "@types/bun": "1.2.10",
+    "@types/node": "22.14.1",
     "@types/react": "19.1.2",
     "@types/react-dom": "19.1.2",
     "tailwindcss": "4.1.4",
-    "typescript": "5.8.3",
-    "@types/bun": "latest"
+    "typescript": "5.8.3"
   }
 }
