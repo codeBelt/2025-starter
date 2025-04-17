@@ -1,5 +1,5 @@
-import {ColorSchemeToggle} from '@/components/shared/colorSchemeToggle/ColorSchemeToggle';
 import Image from 'next/image';
+import {ColorSchemeToggle} from '@/components/shared/colorSchemeToggle/ColorSchemeToggle';
 
 export default function Home() {
   return (
