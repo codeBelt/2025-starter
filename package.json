@@ -20,6 +20,7 @@
     "---------- Helper -----------------------------------------------------": "",
     "deps": "bunx taze --interactive --recursive --install --write --timediff false",
     "deps:major": "bun run deps -- major",
+    "deps:outdated": "bun outdated",
     "checkall": "bun run lint:fix && bun run ts && bun run test",
     "-----------------------------------------------------------------------": ""
   },
