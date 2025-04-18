@@ -5,7 +5,7 @@ import {Separator} from '@/components/ui/shadcn/separator';
 import {Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle} from '@/components/ui/shadcn/sheet';
 import {Skeleton} from '@/components/ui/shadcn/skeleton';
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/shadcn/tooltip';
-import {useIsMobile} from '@/hooks/use-mobile';
+import {useIsMobile} from '@/hooks/useIsMobile/useIsMobile';
 import {cn} from '@/lib/utils';
 import {Slot} from '@radix-ui/react-slot';
 import {type VariantProps, cva} from 'class-variance-authority';

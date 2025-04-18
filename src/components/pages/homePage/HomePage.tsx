@@ -1,9 +1,9 @@
-import {AppSidebar} from '@/components/app-sidebar';
-import {ChartAreaInteractive} from '@/components/chart-area-interactive';
-import {DataTable} from '@/components/data-table';
+import {AppSidebar} from '@/components/appSidebar/AppSidebar';
 import {chartData} from '@/components/pages/homePage/HomePage.constants';
-import {SectionCards} from '@/components/section-cards';
-import {SiteHeader} from '@/components/site-header';
+import {ChartAreaInteractive} from '@/components/pages/homePage/chartAreaInteractive/ChartAreaInteractive';
+import {DataTable} from '@/components/pages/homePage/dataTable/DataTable';
+import {SectionCards} from '@/components/pages/homePage/sectionCards/SectionCards';
+import {SiteHeader} from '@/components/shared/siteHeader/SiteHeader';
 import {SidebarInset, SidebarProvider} from '@/components/ui/shadcn/sidebar';
 import type {CSSProperties} from 'react';
 
