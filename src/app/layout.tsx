@@ -1,6 +1,7 @@
 import '@/styles/globals.css';
 
 import type {LayoutRouteProps} from '@/lib/nextjs.types';
+import {geistMono, geistSans} from '@/styles/fonts';
 import type {Metadata} from 'next';
 
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: LayoutRouteProps) {
   return (
     <html lang="en">
-      <body className={'antialiased'}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
     </html>
   );
 }
