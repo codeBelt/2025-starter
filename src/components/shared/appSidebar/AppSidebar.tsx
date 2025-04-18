@@ -1,9 +1,9 @@
 'use client';
-import {sidebarData} from '@/components/appSidebar/AppSidebar.constants';
-import {NavDocuments} from '@/components/appSidebar/navDocuments/NavDocuments';
-import {NavMain} from '@/components/appSidebar/navMain/NavMain';
-import {NavSecondary} from '@/components/appSidebar/navSecondary/NavSecondary';
-import {NavUser} from '@/components/appSidebar/navUser/NavUser';
+import {sidebarData} from '@/components/shared/appSidebar/AppSidebar.constants';
+import {NavDocuments} from '@/components/shared/appSidebar/navDocuments/NavDocuments';
+import {NavMain} from '@/components/shared/appSidebar/navMain/NavMain';
+import {NavSecondary} from '@/components/shared/appSidebar/navSecondary/NavSecondary';
+import {NavUser} from '@/components/shared/appSidebar/navUser/NavUser';
 import {
   Sidebar,
   SidebarContent,

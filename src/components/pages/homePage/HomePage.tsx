@@ -1,8 +1,8 @@
-import {AppSidebar} from '@/components/appSidebar/AppSidebar';
 import {chartData} from '@/components/pages/homePage/HomePage.constants';
 import {ChartAreaInteractive} from '@/components/pages/homePage/chartAreaInteractive/ChartAreaInteractive';
 import {DataTable} from '@/components/pages/homePage/dataTable/DataTable';
 import {SectionCards} from '@/components/pages/homePage/sectionCards/SectionCards';
+import {AppSidebar} from '@/components/shared/appSidebar/AppSidebar';
 import {SiteHeader} from '@/components/shared/siteHeader/SiteHeader';
 import {SidebarInset, SidebarProvider} from '@/components/ui/shadcn/sidebar';
 import type {CSSProperties} from 'react';
