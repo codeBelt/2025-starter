@@ -1,6 +1,6 @@
 import '@/styles/globals.css';
 
-import type {LayoutRouteProps} from '@/lib/nextjs.types';
+import type {LayoutRouteProps} from '@/lib/nextjs/nextjs.types';
 import {geistMono, geistSans} from '@/styles/fonts';
 import type {Metadata} from 'next';
 
