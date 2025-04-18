@@ -27,12 +27,14 @@ jobs:
       - name: 'Install Bun'
         uses: oven-sh/setup-bun@v2
 
-      - name: 'Cache Dependencies'
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.bun/install/cache
-          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
+      #### Caching is currently disabled because builds are faster without it.
+      #### Re-evaluate this when the project grows larger, as caching may improve performance with more dependencies. ####
+#      - name: 'Cache Dependencies'
+#        uses: actions/cache@v4
+#        with:
+#          path: |
+#            ~/.bun/install/cache
+#          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
 
       - name: 'Install Dependencies'
         run: bun install --frozen-lockfile
