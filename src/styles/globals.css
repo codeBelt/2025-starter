@@ -102,8 +102,8 @@
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar: var(--sidebar);
-  --font-mono: var(--font-geist-mono);
-  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-jet-brains-mono);
+  --font-sans: var(--font-inter);
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
