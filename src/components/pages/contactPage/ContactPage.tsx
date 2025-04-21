@@ -1,31 +1,23 @@
+'use client';
+import {contactFormDefaultValues} from '@/components/pages/contactPage/ContactPage.constants';
+import {ContactFormSchema} from '@/components/pages/contactPage/ContactPage.schemas';
+import {UiInputError} from '@/components/ui/form/uiInputError/UiInputError';
 import {Button} from '@/components/ui/shadcn/button';
-import {type AnyFieldApi, useForm} from '@tanstack/react-form';
-
-function FieldInfo({field}: {field: AnyFieldApi}) {
-  return (
-    <>
-      {field.state.meta.isTouched && field.state.meta.errors.length ? (
-        <em>{field.state.meta.errors.join(',')}</em>
-      ) : null}
-      {field.state.meta.isValidating ? 'Validating...' : null}
-    </>
-  );
-}
+import {Input} from '@/components/ui/shadcn/input';
+import {Label} from '@/components/ui/shadcn/label';
+import {useForm} from '@tanstack/react-form';
 
 export function ContactPage() {
   const form = useForm({
-    defaultValues: {
-      firstName: '',
-      lastName: '',
-    },
+    defaultValues: contactFormDefaultValues,
+    validators: {onSubmit: ContactFormSchema},
     onSubmit: async ({value}) => {
-      // Do something with form data
-      console.log(value);
+      console.info(value);
     },
   });
 
   return (
-    <div className="space-y-6 p-5 font-sans">
+    <div className="space-y-6 p-5">
       <div>
         <h3 className="text-lg font-medium">Account</h3>
         <p className="text-sm text-muted-foreground ">
@@ -35,82 +27,120 @@ export function ContactPage() {
       <div data-orientation="horizontal" className="shrink-0 bg-border h-[1px] w-full" />
       <form
         className="space-y-8"
-        onSubmit={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          form.handleSubmit();
+        onSubmit={(event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          void form.handleSubmit();
         }}
       >
-        <div className="space-y-2">
-          <label
-            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            htmlFor=":r2eh:-form-item"
-          >
-            Name
-          </label>
-          <input
-            className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-            placeholder="Your name"
-            id=":r2eh:-form-item"
-            aria-describedby=":r2eh:-form-item-description"
-            aria-invalid="false"
-            name="name"
+        <div>
+          <form.Field
+            name="firstName"
+            children={(field) => (
+              <div className={'space-y-2'}>
+                <Label htmlFor={field.name}>First Name:</Label>
+                <Input
+                  id={field.name}
+                  name={field.name}
+                  value={field.state.value}
+                  onBlur={field.handleBlur}
+                  onChange={(event) => field.handleChange(event.target.value)}
+                />
+                <UiInputError field={field} />
+              </div>
+            )}
           />
-          <p id=":r2eh:-form-item-description" className="text-[0.8rem] text-muted-foreground">
-            This is the name that will be displayed on your profile and in emails.
-          </p>
-        </div>
-        <div className="space-y-2 flex flex-col">
-          <label
-            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            htmlFor=":r2ei:-form-item"
-          >
-            Date of birth
-          </label>
-          <button
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 w-[240px] pl-3 text-left font-normal text-muted-foreground"
-            id=":r2ei:-form-item"
-            aria-describedby=":r2ei:-form-item-description"
-            aria-invalid="false"
-            type="button"
-            aria-haspopup="dialog"
-            aria-expanded="false"
-            aria-controls="radix-:r2ej:"
-            data-state="closed"
-          >
-            <span>Pick a date</span>
-            icon
-          </button>
-          <p id=":r2ei:-form-item-description" className="text-[0.8rem] text-muted-foreground">
-            Your date of birth is used to calculate your age.
-          </p>
-        </div>
-        <div className="space-y-2 flex flex-col">
-          <label
-            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            htmlFor=":r2ek:-form-item"
-          >
-            Language
-          </label>
-          <button
-            className="inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 w-[200px] justify-between text-muted-foreground"
-            id=":r2ek:-form-item"
-            aria-describedby=":r2ek:-form-item-description"
-            aria-invalid="false"
-            type="button"
-            aria-haspopup="dialog"
-            aria-expanded="false"
-            aria-controls="radix-:r2el:"
-            data-state="closed"
-          >
-            Select language icon
-          </button>
-          <p id=":r2ek:-form-item-description" className="text-[0.8rem] text-muted-foreground">
-            This is the language that will be used in the dashboard.
-          </p>
         </div>
 
-        <Button type={'submit'}>Submit</Button>
+        <div>
+          <form.Field
+            name="lastName"
+            children={(field) => (
+              <div className={'space-y-2'}>
+                <Label htmlFor={field.name}>Last Name:</Label>
+                <Input
+                  id={field.name}
+                  name={field.name}
+                  value={field.state.value}
+                  onBlur={field.handleBlur}
+                  onChange={(event) => field.handleChange(event.target.value)}
+                />
+                <UiInputError field={field} />
+              </div>
+            )}
+          />
+        </div>
+
+        <div>
+          <form.Field
+            name="email"
+            children={(field) => (
+              <div className={'space-y-2'}>
+                <Label htmlFor={field.name}>Email:</Label>
+                <Input
+                  id={field.name}
+                  name={field.name}
+                  value={field.state.value}
+                  onBlur={field.handleBlur}
+                  onChange={(event) => field.handleChange(event.target.value)}
+                />
+                <UiInputError field={field} />
+              </div>
+            )}
+          />
+        </div>
+
+        <div>
+          <form.Field
+            name="password1"
+            children={(field) => (
+              <div className={'space-y-2'}>
+                <Label htmlFor={field.name}>Password:</Label>
+                <Input
+                  id={field.name}
+                  name={field.name}
+                  value={field.state.value}
+                  onBlur={field.handleBlur}
+                  onChange={(event) => field.handleChange(event.target.value)}
+                />
+                <UiInputError field={field} />
+              </div>
+            )}
+          />
+        </div>
+
+        <div>
+          <form.Field
+            name="password2"
+            children={(field) => (
+              <div className={'space-y-2'}>
+                <Label htmlFor={field.name}>Confirm Password:</Label>
+                <Input
+                  id={field.name}
+                  name={field.name}
+                  value={field.state.value}
+                  onBlur={field.handleBlur}
+                  onChange={(event) => field.handleChange(event.target.value)}
+                />
+                <UiInputError field={field} />
+              </div>
+            )}
+          />
+        </div>
+
+        <form.Subscribe
+          selector={(state) => [state.canSubmit, state.isSubmitting]}
+          children={([canSubmit, isSubmitting]) => (
+            <div className={'flex gap-2'}>
+              <Button type="submit" disabled={!canSubmit}>
+                {isSubmitting ? '...' : 'Submit'}
+              </Button>
+              <Button variant={'outline'} type="reset" onClick={() => form.reset()}>
+                Reset
+              </Button>
+            </div>
+          )}
+        />
       </form>
     </div>
   );

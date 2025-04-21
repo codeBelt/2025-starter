@@ -24,6 +24,7 @@
         "@tanstack/react-form": "1.6.3",
         "@tanstack/react-table": "8.21.3",
         "@uidotdev/usehooks": "2.4.1",
+        "@valibot/to-json-schema": "1.0.0",
         "class-variance-authority": "0.7.1",
         "clsx": "2.1.1",
         "http-status-codes": "2.3.0",
@@ -323,6 +324,8 @@
     "@types/through": ["@types/through@0.0.33", "", { "dependencies": { "@types/node": "*" } }, "sha512-HsJ+z3QuETzP3cswwtzt2vEIiHBk/dCcHGhbmG5X3ecnwFD/lPrMpliGXxSCg03L9AhrdwA4Oz/qfspkDW+xGQ=="],
 
     "@uidotdev/usehooks": ["@uidotdev/usehooks@2.4.1", "", { "peerDependencies": { "react": ">=18.0.0", "react-dom": ">=18.0.0" } }, "sha512-1I+RwWyS+kdv3Mv0Vmc+p0dPYH0DTRAo04HLyXReYBL9AeseDWUJyi4THuksBJcu9F0Pih69Ak150VDnqbVnXg=="],
+
+    "@valibot/to-json-schema": ["@valibot/to-json-schema@1.0.0", "", { "peerDependencies": { "valibot": "^1.0.0" } }, "sha512-/9crJgPptVsGCL6X+JPDQyaJwkalSZ/52WuF8DiRUxJgcmpNdzYRfZ+gqMEP8W3CTVfuMWPqqvIgfwJ97f9Etw=="],
 
     "aggregate-error": ["aggregate-error@4.0.1", "", { "dependencies": { "clean-stack": "^4.0.0", "indent-string": "^5.0.0" } }, "sha512-0poP0T7el6Vq3rstR8Mn4V/IQrpBLO6POkUSrN7RhyY+GF/InCFShQzsQ39T25gkHhLgSLByyAz+Kjb+c2L98w=="],
 

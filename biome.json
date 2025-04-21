@@ -28,7 +28,7 @@
       },
       "complexity": { "noUselessTypeConstraint": "error", "noWith": "off" },
       "correctness": {
-        "noChildrenProp": "error",
+        "noChildrenProp": "off",
         "noConstAssign": "off",
         "noGlobalObjectCalls": "off",
         "noInvalidBuiltinInstantiation": "off",
