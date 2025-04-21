@@ -51,9 +51,9 @@ import {
 } from '@tanstack/react-table';
 import {useId, useMemo, useState} from 'react';
 
-type Props = {
+interface Props {
   data: DataTableSchema[];
-};
+}
 
 export function DataTable({data: initialData}: Props) {
   const [data, setData] = useState(() => initialData);

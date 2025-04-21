@@ -17,7 +17,7 @@ import {IconInnerShadowTop} from '@tabler/icons-react';
 import Link from 'next/link';
 import type {ComponentProps} from 'react';
 
-type Props = ComponentProps<typeof Sidebar> & {};
+interface Props extends ComponentProps<typeof Sidebar> {}
 
 export function AppSidebar({...sideProps}: Props) {
   return (

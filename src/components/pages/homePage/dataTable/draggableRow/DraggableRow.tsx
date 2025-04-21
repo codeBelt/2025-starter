@@ -4,9 +4,9 @@ import {useSortable} from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
 import {type Row, flexRender} from '@tanstack/react-table';
 
-type Props = {
+interface Props {
   row: Row<DataTableSchema>;
-};
+}
 
 export function DraggableRow({row}: Props) {
   const {transform, transition, setNodeRef, isDragging} = useSortable({

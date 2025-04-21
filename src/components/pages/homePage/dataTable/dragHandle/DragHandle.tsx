@@ -2,9 +2,9 @@ import {Button} from '@/components/ui/shadcn/button';
 import {useSortable} from '@dnd-kit/sortable';
 import {IconGripVertical} from '@tabler/icons-react';
 
-type Props = {
+interface Props {
   id: number;
-};
+}
 
 export function DragHandle({id}: Props) {
   const {attributes, listeners} = useSortable({id});

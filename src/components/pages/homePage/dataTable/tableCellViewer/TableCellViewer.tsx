@@ -23,9 +23,9 @@ import {useIsMobile} from '@/hooks/useIsMobile/useIsMobile';
 import {IconTrendingUp} from '@tabler/icons-react';
 import {Area, AreaChart, CartesianGrid, XAxis} from 'recharts';
 
-type Props = {
+interface Props {
   item: DataTableSchema;
-};
+}
 
 export function TableCellViewer({item}: Props) {
   const isMobile = useIsMobile();
