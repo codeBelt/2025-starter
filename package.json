@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "preinstall": "bunx only-allow bun",
     "---------- Dev --------------------------------------------------------": "",
     "dev": "next dev --turbopack",
     "---------- Prod -------------------------------------------------------": "",
@@ -21,6 +22,7 @@
     "deps": "bunx npm-check-updates -ui",
     "deps:outdated": "bun outdated",
     "checkall": "bun run lint:fix && bun run test && bun run ts",
+    "template": "bunx plop",
     "-----------------------------------------------------------------------": ""
   },
   "dependencies": {
@@ -65,6 +67,7 @@
     "@types/node": "22.14.1",
     "@types/react": "19.1.2",
     "@types/react-dom": "19.1.2",
+    "plop": "4.0.1",
     "tailwindcss": "4.1.4",
     "typescript": "5.8.3"
   }
