@@ -14,6 +14,7 @@ import {
   SidebarMenuItem,
 } from '@/components/ui/shadcn/sidebar';
 import {IconInnerShadowTop} from '@tabler/icons-react';
+import Link from 'next/link';
 import type {ComponentProps} from 'react';
 
 type Props = ComponentProps<typeof Sidebar> & {};
@@ -25,10 +26,10 @@ export function AppSidebar({...sideProps}: Props) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5">
-              <a href="http://google.com">
+              <Link href="/">
                 <IconInnerShadowTop className="!size-5" />
                 <span className="text-base font-semibold">Acme Inc.</span>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
