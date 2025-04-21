@@ -17,7 +17,9 @@ export async function generateMetadata() {
 export default function RootLayout({children}: LayoutRouteProps) {
   return (
     <html lang="en">
-      <body className={`${interFont.className} ${jetBrainsMonoFont.className} antialiased`}>{children}</body>
+      <body className={`${interFont.variable} ${interFont.className} ${jetBrainsMonoFont.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
