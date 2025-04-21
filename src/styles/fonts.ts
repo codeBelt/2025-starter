@@ -1,5 +1,11 @@
 import {Inter, JetBrains_Mono} from 'next/font/google';
 
+/**
+ * Next.js: https://nextjs.org/docs/app/building-your-application/optimizing/fonts#using-multiple-fonts
+ * Tailwind v4: https://nextjs.org/docs/app/building-your-application/optimizing/fonts#tailwind-css-v4
+ *              https://tailwindcss.com/docs/theme
+ */
+
 export const interFont = Inter({
   subsets: ['latin'],
   weight: [
