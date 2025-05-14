@@ -13,7 +13,7 @@
     "lint": "biome check",
     "lint:fix": "biome check --write",
     "ts": "tsc --noEmit",
-    "ts:watch": "npm run ts -- --watch",
+    "ts:watch": "bun run ts -- --watch",
     "---------- Test --------------------------------------------------------": "",
     "test": "bun test",
     "test:watch": "bun test --watch",
